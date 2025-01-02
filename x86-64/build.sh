@@ -8,20 +8,43 @@ echo "$(date '+%Y-%m-%d %H:%M:%S') - 开始编译..."
 
 
 # 定义所需安装的包列表
+# PACKAGES=""
+# PACKAGES="$PACKAGES curl"
+# PACKAGES="$PACKAGES luci-i18n-diskman-zh-cn"
+# PACKAGES="$PACKAGES luci-i18n-firewall-zh-cn"
+# PACKAGES="$PACKAGES luci-i18n-filebrowser-zh-cn"
+# PACKAGES="$PACKAGES luci-app-argon-config"
+# PACKAGES="$PACKAGES luci-i18n-argon-config-zh-cn"
+# PACKAGES="$PACKAGES luci-i18n-opkg-zh-cn"
+# PACKAGES="$PACKAGES luci-i18n-ttyd-zh-cn"
+# PACKAGES="$PACKAGES luci-i18n-passwall-zh-cn"
+# PACKAGES="$PACKAGES luci-app-openclash"
+# PACKAGES="$PACKAGES luci-i18n-homeproxy-zh-cn"
+# PACKAGES="$PACKAGES openssh-sftp-server"
+# PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
+#注释掉悟空大神包列表并添加以下自定义列表
 PACKAGES=""
+# 基础包
 PACKAGES="$PACKAGES curl"
+# 多语言支持包
 PACKAGES="$PACKAGES luci-i18n-diskman-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-firewall-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-filebrowser-zh-cn"
-PACKAGES="$PACKAGES luci-app-argon-config"
 PACKAGES="$PACKAGES luci-i18n-argon-config-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-opkg-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-ttyd-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-passwall-zh-cn"
-PACKAGES="$PACKAGES luci-app-openclash"
 PACKAGES="$PACKAGES luci-i18n-homeproxy-zh-cn"
-PACKAGES="$PACKAGES openssh-sftp-server"
 PACKAGES="$PACKAGES luci-i18n-dockerman-zh-cn"
+PACKAGES="$PACKAGES luci-i18n-mwan3-zh-cn"
+PACKAGES="$PACKAGES luci-i18n-smartdns-zh-cn"
+# 应用包
+PACKAGES="$PACKAGES luci-app-argon-config"
+PACKAGES="$PACKAGES luci-app-openclash"
+PACKAGES="$PACKAGES luci-app-mwan3"
+PACKAGES="$PACKAGES luci-app-homeproxy"
+PACKAGES="$PACKAGES openssh-sftp-server"
+PACKAGES="$PACKAGES luci-app-smartdns"
 
 # 构建镜像
 echo "$(date '+%Y-%m-%d %H:%M:%S') - Building image with the following packages:"
